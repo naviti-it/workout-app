@@ -1,4 +1,3 @@
-import React from 'react'
 import { SelectedPage } from '@/shared/types';
 import useMediaQuery from './../../hooks/useMediaQuery';
 import ActionButton from '@/shared/ActionButton';
@@ -20,7 +19,7 @@ const Home = ({ setSelectedPage }: Props) => {
     return (
         <section
             id='home'
-            className='gap-16 bg-gray-20 py-10 md:h-full md:pb-0'
+            className='bg-gray-20 py-10 md:h-full md:pb-0'
         >
             {/* IMAGE AND MAIN HEADER */}
             <motion.div
@@ -60,12 +59,12 @@ const Home = ({ setSelectedPage }: Props) => {
                             hidden: { opacity: 0, x: -50 },
                             visible: { opacity: 1, x: 0 }
                         }}
-                        className='mt-8 flex items-center gap-8'>
+                        className='mt-8 flex items-center'>
                         <ActionButton setSelectedPage={setSelectedPage}>
                             Join Now
                         </ActionButton>
                         <AnchorLink
-                            className='text-sm font-bold text-primary-500 underline hover:text-secondary-500'
+                            className='text-sm font-bold text-primary-500 underline hover:text-secondary-500 ml-7'
                             onClick={() => setSelectedPage(SelectedPage.ContactUs)}
                             href={`#${SelectedPage.ContactUs}`}
                         >
@@ -82,7 +81,7 @@ const Home = ({ setSelectedPage }: Props) => {
             {isAboveMediumScreens && (
                 <div className='h-[150px] w-full bg-primary-100 py-10'>
                     <div className='mx-auto w-5/6'>
-                        <div className='flex w-3/5 items-center justify-between gap-8'>
+                        <div className='flex w-3/5 items-center justify-between'>
                             <img src={SponsorRedBull} alt='redbull-sponsor' />
                             <img src={SponsorForbes} alt='forbes-sponsor' />
                             <img src={SponsorFortune} alt='fortune-sponsor' />
